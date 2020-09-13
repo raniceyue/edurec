@@ -1,0 +1,327 @@
+
+/* Import Roboto */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap');
+
+
+/* General */
+
+html {
+    overflow: scroll;
+}
+
+.content {
+    min-width: 90%;
+    padding-bottom: 5%;
+}
+
+button > a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.breadcrumbs {
+    width: 100%
+    padding: 20px 0px 20px 0px;
+}
+
+.breadcrumbs li {
+    list-style-type: none;
+    display: inline;
+}
+
+.breadcrumbs li:before{
+    content: '';
+    position: absolute;
+    border-right:2px solid black;
+    border-bottom:2px solid black;
+    width:10px;
+    height:10px;
+    top: calc(50% - 4px);
+    left: -20px;
+    transform: translateY(-50%) rotate(-45deg);
+ }
+
+/*
+* ICONS
+*/
+
+.right-sidebar .fa.edit-icon {
+    font-size: 20px;
+    color: #999;
+}
+
+.right-sidebar .fa.edit-icon:hover {
+    color:#4c4c4c
+}
+
+
+/* Welcome Title */
+.welcome-title {
+    font-family: 'Roboto Light', sans-serif;
+    font-size: 50px;
+    margin-right: 5px;
+    padding: 30px 0px 30px 0px;
+}
+
+
+/*
+* NAVIGATION BAR
+*/
+
+.navbar {
+    background-color: #003062;
+    max-height: 3%;
+}
+
+.navbar-nav .dropdown-menu {
+    position: absolute!important
+}
+
+#dropdownMenuButton {
+    background: none;
+    border: none;
+    padding: 0px 15px;
+    font: inherit;
+    cursor: pointer;
+    outline: inherit;
+    color: #fff;
+    font-size: 35px;
+}
+
+.custom-navbar .navbar-right {
+    display: block;
+    float: right;
+    padding-right: 15px;
+}
+
+.custom-navbar .nav.navbar-nav.navbar-right li {
+    float: right;
+}
+
+/* Icons */
+.custom-navbar .nav.navbar-nav.navbar-right li > a { 
+    padding:8px 15px;
+    color: #fff;
+    font-size: 35px;
+}
+
+.custom-navbar a:hover {
+    text-decoration: none;
+}
+
+.custom-navbar .navbar-toggle {
+    float: left
+}
+
+.custom-navbar .navbar-header {
+    float: left;
+    width: auto!important;
+}
+.custom-navbar .navbar-collapse {
+    clear: both;
+    float: none;
+}
+
+.custom-navbar .fa { 
+    font-size: 35px;
+}
+
+.edurec-logo {
+    font-family: Roboto, sans-serif;
+    font-weight: 300;
+    font-size: 35px;
+    color: #EF7C00;
+}
+
+/* Searchbar */
+.form-group {
+    margin-bottom: 0rem!important;
+}
+
+.has-search .form-control {
+    padding-left: 2.375rem;
+}
+
+.has-search .form-control-feedback {
+    position: absolute;
+    z-index: 2;
+    display: block;
+    width: 2.350rem;
+    height: 2.350rem;
+    line-height: 2.375rem;
+    text-align: center;
+    pointer-events: none;
+    color: #aaa;
+}
+
+.form-group .fa {
+    font-size: 25px;
+}
+
+/* Main Menu Dropdown */
+
+.main-menu.dropdown-menu {
+    position: absolute;
+    background-color: #003062;
+    border-color: #aaa;
+    border-radius: 0;
+    min-width: 17rem;
+    height: 1000px;
+    float: right;
+    margin: 10px 0px 0px;
+
+    font-family: 'Roboto Light', sans-serif;
+    text-align: left;
+
+    right: 0;
+}
+
+.main-menu > .dropdown-item {
+    color: #fff;
+    font-size: 30px;
+    min-height: 50px;
+    margin: 10px 0px 10px 0px;
+    padding: 10px 0px 10px 50px;
+}
+
+.main-menu > a.dropdown-item:hover {
+    background-color: #0056b3;
+    color: #fff;
+}
+
+.main-menu-title {
+    font-family: 'Roboto Thin', sans-serif;
+    font-size: 50px;
+    color: #fff;
+    margin: 20px 0px 20px 0px;
+    text-align: center;
+}
+
+
+/* Grey Blocks */
+
+.block { 
+    background-color: #F6F6F6;
+    border-radius: 10px;
+    padding: 20px;
+    width: 100%;
+    margin: 5px;
+}
+
+.block a {
+    color: #003062;
+}
+
+.block a:hover {
+    color: inherit;
+    text-decoration: underline;
+}
+
+.landing-block h1 {
+    font-family: 'Roboto Light', sans-serif;
+    font-size: 35px;
+    padding: 10px 0px 10px 0px;
+    text-align: center;
+}
+
+.landing-block ul {
+    padding: 0px 10% 0px 10%;
+}
+
+.landing-block ul > li {
+    font-family: 'Roboto Light', sans-serif;
+    font-size: 25px;
+    list-style-type: none;
+    padding: 15px 0px 15px 0px;
+    color: #003062;
+}
+
+.long-block {
+    min-height: 100%;
+}
+
+.short-block {
+    min-height: 50%;
+}
+
+.long-col {
+    height: 100%;
+}
+
+.long-col > .row {
+    min-height: 50%;
+}
+
+.block-notice {
+    background-color: #FFD4D4;
+}
+
+.right-sidebar {
+    float: right;
+}
+
+.right-sidebar > .row > .block {
+    width: 80%;
+    margin-left: auto;
+    margin-right: 0;
+}
+
+.right-sidebar  h1 {
+    font-family: 'Roboto Light', sans-serif;
+    font-size: 30px;
+    padding: 10px 0px 10px 0px;
+    text-align: left;
+}
+
+.right-sidebar .fa {
+    font-size: 30px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.right-sidebar i {
+    min-width: 50px;
+    text-align: center;
+}
+
+.right-sidebar ul {
+    padding: 0;
+    padding-left: 50px;
+}
+
+.right-sidebar ul > li {
+    list-style-type: none;
+    padding: 0;
+    padding-bottom: 5px;
+    font-size: 22px;
+}
+
+/*
+* LANDING PAGE SPECIFIC STUFF
+*/ 
+
+.big-icon {
+    background-color:#003062;
+    color: #fff;
+    width: 150px;
+    height: 150px;
+    border-radius: 75px;
+    padding: 10px;
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.big-icon .fa {
+    color: #fff;
+    font-size: 70px;
+    text-align: center;
+}
+
+.big-icon > i {
+    position: relative;
+    transform: translateY(40%);
+}
+
+
