@@ -6,7 +6,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-	<link rel="shortcut icon" href="./images/nus-logo.png">
+	<link rel="shortcut icon" href="./images/favicon.png">
 
     <link rel="stylesheet" href="./style.css">
 
@@ -102,6 +102,7 @@
 
 <div class="container-fluid nested-page">
 	<div class="row">
+		<!-- SIDEBAR -->
 		<div class="col-md-2" style="min-width:20%; float: left;">
 			<div class="sidebar">
 				<div class="sidebar-title">
@@ -178,9 +179,13 @@
 					</tr>
 				</table>
 			</div>
-		</div>
+		</div> <!-- END SIDEBAR -->
+
+		<!-- PAGE CONTENT-->
 		<div class="col">
 			<div class="content-nested-page">
+
+				<!-- BREADCRUMBS -->
 				<div class="breadcrumbs">
 					<ul>
 						<a href="landing.html">Home</a>
@@ -196,6 +201,7 @@
 					</ul>
 				</div>
 
+				<!-- NOTICES BLOCK-->
 				<div class="block block-notice">
 					<h2><i class="fa fa-exclamation"></i>Notices</h2>
 					<ul>
@@ -207,8 +213,162 @@
 						</li>
 					</ul>
 				</div>
+
+				<!-- SEARCH APPLICATIONS-->
+				<div class="block">
+					<div class="row">
+						<div class="col-md-3" style="margin: auto;">
+							<h3>Search Applications</h3>
+						</div>
+
+						<!-- SEARCH INPUT FIELDS -->
+						<div class="col-md-9">
+							<table id="global-ed-search">
+								<tr>
+									<td>
+										<select class="form-control" style="width: 90%; margin: auto;">
+											<option>Bug Report</option>
+											<option>Feedback on Design</option>
+											<option>Feature Suggestion</option>
+											<option>General Enquiry</option>
+										</select>
+									</td>
+									<td>
+										<input type="search" class="form-control" placeholder="">
+									</td>
+									<td>
+										<button onClick="myFunction()">
+											<h2><i class="fa fa-plus"></i></h2>
+										</button>
+										
+										<script>
+											function myFunction() {
+											  var btn = document.createElement("BUTTON");
+											  document.body.appendChild(btn);
+											}
+										</script>
+									</td>
+								</tr>
+							</table>
+						</div>
+					</div>
+				</div>
+
+				<!-- MY APPPLICATIONS SECTION -->
+				<div class="block">
+					<h2>My Applications</h2>
+
+					<!-- MODULE TABLE -->
+					<table class="table table-light table-hover custom-table" id="global-ed-applications">
+						<thead>
+						  <tr>
+							<th scope="col">External Study AY</th>
+							<th scope="col">ID</th>
+							<th scope="col">Type</th>
+							<th scope="col">Ext. Study Name</th>
+							<th scope="col">Status</th>
+							<th scope="col">Pending Actions</th>
+						  </tr>
+						</thead>
+						<tbody>
+						  <tr>
+							<td>2020/2021 Sem 1</td>
+							<td>12345</td>
+							<td>SEP</td>
+							<th>
+								<a href="">
+									School of Computing SEP Application 2020/2021 Sem 1
+								</a>
+							</th>
+							<td>
+								<div class="status-button reject">
+									Rejected
+								</div>
+							</td>
+							<td>0</td>
+						  </tr>
+						  <tr>
+							<td>2020/2021 Sem 2</td>
+							<td>54674</td>
+							<td>SEP</td>
+							<th>
+								<a href="">
+									School of Computing SEP Application 2020/2021 Sem 2
+								</a>
+							</th>							
+							<td>
+								<div class="status-button success">
+									Successful
+								</div>
+							</td>
+							<td>1</td>
+						  </tr>
+						  <tr>
+							<td>2019/2020</td>
+							<td>35635</td>
+							<td>Winter School</td>
+							<th>
+								<a href="">
+									i-SP: KOREA Korea University International Winter Campus 2019
+								</a>
+							</th>							
+							<td>
+								<div class="status-button incomplete">
+									Incomplete
+								</div>							
+							</td>
+							<td>7</td>
+						  </tr>
+						</tbody>
+					</table><!-- END TABLE -->
+				</div>
+
+				<!-- FAQ SECTION-->
+				<div class="block">
+					<h3>Frequently Asked Questions</h3>
+					<div class="row">
+						<!-- LINKS TO QUESTIONS -->
+						<div class="col-6">
+							<ul class="faq-list">
+								<li>
+									<a href="">How to Apply for SEP</a>
+								</li>
+								<li>
+									<a href="">How to make appeals for rejected applications?</a>
+								</li>
+								<li>
+									<a href="">How to upload documents onto SEP application?</a>
+								</li>
+								<li>
+									<a href="">Why am I unable to apply for SEP?</a>
+								</li>
+								<li>
+									<a href="">Why can't I find the mapping for the module I want?</a>
+								</li>
+							</ul>
+						</div>
+
+						<!-- MORE INFO SECTION-->
+						<div class="col-6">
+							<div class="text" style="text-align: center;">
+								<b>
+									Don't see your question here? <br>
+									Please refer to the EduRec User Guide for more information.
+								</b>
+							</div>
+							<br>
+							<div class="round-button green">
+								<i class="fa fa-question"></i>
+								<a href="">
+									User Guide
+								</a>
+							</div>
+						</div>
+					</div>
+				</div><!-- FAQ SECTION -->
+
 			</div>
-		</div>
+		</div><!-- END PAGE CONTENT-->
 	</div>
 </div>
 

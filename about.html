@@ -6,7 +6,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <link rel="shortcut icon" href="./images/nus-logo.png">
+	<link rel="shortcut icon" href="./images/favicon.png">
 
     <link rel="stylesheet" href="./style.css">
 
@@ -56,8 +56,10 @@
             </div>
         </ul>
         
-        <!-- Icons on the side -->
+        <!-- ICONS ON THE SIDE -->
         <ul class="nav navbar-nav navbar-right">
+            
+            <!-- MAIN MENU ICON -->
             <li>
                 <button id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     <a href="#" class="fa fa-bars" title="Main Menu"></a>
@@ -75,6 +77,7 @@
                 </div>
             </li>
 
+            <!-- NOTIFICATIONS ICON -->
             <li>
                 <button id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     <a href="#" class="fa fa-bell" title="Notifications" style="font-size: 30px;"></a>
@@ -86,6 +89,8 @@
                     <a href="#" class="fa fa-question" title="EduRec User Guide"></a>
                 </button>
             </li>
+
+            <!-- QUICK LINKS ICON -->
             <li>
                 <button id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     <a href="#" class="fa fa-star" title="Quick Links" style="color: #DBC500;"></a>
@@ -98,6 +103,7 @@
             </li>
         </ul>
     </nav>
+
 </header>
 
 <div class="container content">
@@ -114,79 +120,80 @@
 
 	<div class="row">
 		<div class="col-8">
-			<div class="row">
-				<div class="block" style="text-align: center;">
-					<div class="welcome-title">About EduRec</div>
-                
-                    <div style="text-align: justify; padding-bottom: 15px;">
-                        EduRec is an online portal made for NUS students to manage their education records. 
-                        This includes financials, acadmeics, such as module registration, applying for graduation, and many other general administrative matters, such as paying for school fees. 
-                        <br><br>
-                        To learn how to navigate EduRec, you may refer to our User Guide, linked down below. Alternatively, if you would like to contact EduRec with further queries, you may contact us at the link down below. 
-                    </div>
 
-                    <div class="row">
-                        <div class="col-6">
-                            <div class="round-button green">
-                                <i class="fa fa-question"></i>
-                                <a href="">
-                                    User Guide
-                                </a>
-                            </div>
-                        </div>
-                        <div class="col-6">
-                            <div class="round-button blue">
-                                <i class="fa fa-envelope"></i>
-                                <a href="">
-                                    Contact Us
-                                </a>
-                            </div>    
-                        </div>
-                    </div>
-
+            <!-- TEXT BLOCK -->
+            <div class="block" style="text-align: center;">
+                <div class="welcome-title">About EduRec</div>
+            
+                <div style="text-align: justify; padding-bottom: 15px;">
+                    EduRec is an online portal made for NUS students to manage their education records. 
+                    This includes financials, acadmeics, such as module registration, applying for graduation, and many other general administrative matters, such as paying for school fees. 
+                    <br><br>
+                    To learn how to navigate EduRec, you may refer to our User Guide, linked down below. Alternatively, if you would like to contact EduRec with further queries, you may contact us at the link down below. 
                 </div>
-			</div>
-			<div class="row">
-				<div class="block">
-                    <h3>We want to hear from you!</h3>
-                    <div style="text-align: justify;">
-                        Have any feedback on how EduRec can be improved? 
-                        Please feel free to contact us or give us feedback via this form. All feedback is anonymous and will be kept confidential.
-                    </div>
-                    <table id="about-page-feedback">
-                        <tr>
-                            <td>
-                                <label for="cat"><b>Category</b></label>
-                            </td>
-                            <td>
-                                <select class="form-control" id="cat" style="width: 30%;">
-                                    <option>Bug Report</option>
-                                    <option>Feedback on Design</option>
-                                    <option>Feature Suggestion</option>
-                                    <option>General Enquiry</option>
-                                </select>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <b>Feedback</b>
-                            </td>
-                            <td>
-                                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3">
-                                </textarea>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
 
-                            </td>
-                            <td style="text-align: right;">
-                                <button type="submit" class="btn btn-primary">Submit</button>
-                            </td>
-                        </tr>
-                    </table>
-				</div>
-			</div>
+                <!-- BUTTONS -->
+                <div class="row">
+                    <div class="col-6">
+                        <div class="round-button green">
+                            <i class="fa fa-question"></i>
+                            <a href="">
+                                User Guide
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="round-button blue">
+                            <i class="fa fa-envelope"></i>
+                            <a href="">
+                                Contact Us
+                            </a>
+                        </div>    
+                    </div>
+                </div>
+
+            </div>
+            
+            <!-- FEEDBACK BLOCK -->
+            <div class="block">
+                <h3>We want to hear from you!</h3>
+                <div style="text-align: justify;">
+                    Have any feedback on how EduRec can be improved? 
+                    Please feel free to contact us or give us feedback via this form. All feedback is anonymous and will be kept confidential.
+                </div>
+
+                <!-- FEEDBACK FORM-->
+                <table id="about-page-feedback">
+                    <tr>
+                        <td>
+                            <label for="cat"><b>Category</b></label>
+                        </td>
+                        <td>
+                            <select class="form-control" id="cat" style="width: 30%;">
+                                <option>Bug Report</option>
+                                <option>Feedback on Design</option>
+                                <option>Feature Suggestion</option>
+                                <option>General Enquiry</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <b>Feedback</b>
+                        </td>
+                        <td>
+                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3">
+                            </textarea>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td style="text-align: right;">
+                            <button type="submit" class="btn btn-primary">Submit</button>
+                        </td>
+                    </tr>
+                </table><!-- END FEEDBACK FORM -->
+            </div><!-- END FEEDBACK BLOCK -->
 		</div>
 
 		<!-- SIDEBAR -->
