@@ -6,6 +6,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
+	<link rel="shortcut icon" href="./images/nus-logo.png">
+
     <link rel="stylesheet" href="./style.css">
 
     <link rel="stylesheet" 
@@ -30,6 +32,7 @@
             crossorigin="anonymous"></script>
 
     <title> Edurec | Home </title>
+    
 
 </head>
 
@@ -41,9 +44,10 @@
         <a class="navbar-brand" href="./landing.html" style="align-items: center; display: flex;">
             <!-- Redirect to Home-->
             <img src="./images/nus-logo.png" width="30" height="40" alt="">
+
+            <span class="edurec-logo">EduRec</span>
         </a>
         
-        <span class="edurec-logo">EduRec</span>
         
         <!-- SEARCHBAR -->
         <ul class="navbar-nav mr-auto ml-auto">
@@ -59,6 +63,7 @@
                 <button id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     <a href="#" class="fa fa-bars" title="Main Menu"></a>
                 </button>
+
                 <div class="dropdown">
                     <div class="main-menu dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
                         <div class="main-menu-title">Menu</div>
@@ -70,17 +75,27 @@
                     </div>
                 </div>
             </li>
+
             <li>
-                <a href="#" class="fa fa-bell" title="Notifications"></a>
+                <button id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <a href="#" class="fa fa-bell" title="Notifications" style="font-size: 30px;"></a>
+                </button>
             </li>
-                <li>
+            
+            <li>
+                <button id="dropdownMenuButton">
                     <a href="#" class="fa fa-question" title="EduRec User Guide"></a>
+                </button>
             </li>
             <li>
-                <a href="#" class="fa fa-star" title="Quick Links" style="color: #DBC500;"></a>
+                <button id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <a href="#" class="fa fa-star" title="Quick Links" style="color: #DBC500;"></a>
+                </button>
             </li>
             <li>
-                <a href="#" class="fa fa-home" title="Back to Home Page"></a>
+                <button id="dropdownMenuButton">
+                    <a href="./landing.html" class="fa fa-home" title="Home Page"></a>
+                </button>            
             </li>
         </ul>
     </nav>
@@ -117,7 +132,7 @@
                         <a href="">Examinations</a>
                     </li>
                     <li>
-                        <a href="">Module Registration</a>
+                        <a href="./modreg.html">Module Registration</a>
                     </li>
                     <li>
                         <a href="">Degree Progress</a>

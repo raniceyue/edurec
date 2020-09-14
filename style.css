@@ -6,21 +6,56 @@
 /*
 * GENERAL
 */
-html {
-    font-family: 'Roboto', sans-serif;
-    font-size: 16px;
-    overflow: scroll;
+html, body {
+    font-family: 'Roboto Regular', sans-serif;
+    font-weight: 600;
+    font-size: 18px;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
 }
 
 body {
-    font-family: 'Roboto', sans-serif;   
-    font-weight: 300; 
-    font-size: 16px;
+    overflow-y: scroll;
+}
+
+/*
+* SCROLLBAR
+*/
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
 }
 
 .content {
+    display: block;
     min-width: 80%;
     padding-bottom: 5%;
+    margin: auto;
+}
+
+.content-nested-page {
+    display: block;
+    width: 95%;
+    padding-right: 5%;
+    padding-bottom: 5%;
+    margin: auto;
 }
 
 a {
@@ -59,6 +94,10 @@ button > a {
     display: inline;
 }
 
+.breadcrumbs ul > li:last-child {
+    font-weight: 500;
+}
+
 .breadcrumbs li:before{
     content: ">";
  }
@@ -69,7 +108,7 @@ button > a {
 
 .right-sidebar .fa.edit-icon {
     font-size: 20px;
-    color: #999;
+    color: #CECECE;
 }
 
 .right-sidebar .fa.edit-icon:hover {
@@ -124,7 +163,7 @@ button > a {
 
 /* Icons */
 .custom-navbar .nav.navbar-nav.navbar-right li > a { 
-    padding: 8px 15px;
+    padding: 0px 15px;
     color: #fff;
     font-size: 25px;
 }
@@ -141,19 +180,20 @@ button > a {
     float: left;
     width: auto!important;
 }
+
 .custom-navbar .navbar-collapse {
     clear: both;
     float: none;
 }
 
 .custom-navbar .fa { 
-    font-size: 25px;
+    font-size: 35px;
 }
 
 .edurec-logo {
     font-family: Roboto, sans-serif;
     font-weight: 300;
-    font-size: 25px;
+    font-size: 30px;
     margin-left: 10px;
     color: #EF7C00;
 }
@@ -228,7 +268,7 @@ button > a {
 
 .block { 
     font-family: 'Roboto Light', sans-serif;
-    font-size: 16px;
+    font-size: inherit;
     line-height: 2rem;
     background-color: #F6F6F6;
     border-radius: 10px;
@@ -244,6 +284,16 @@ button > a {
 .block a:hover {
     color: inherit;
     text-decoration: underline;
+}
+
+.block .text > ol {
+    padding-top: 10px;
+}
+
+.block .text > ol > li {
+    font-size: 20px;
+    padding-bottom: 20px;
+    padding-left: 10px;
 }
 
 .landing-block h1 {
@@ -285,6 +335,12 @@ button > a {
     background-color: #FFD4D4;
 }
 
+.block-modreg-notice {
+    font-size: 20px;
+    padding: 3%; 
+    background-color: #A5D6C4;
+}
+
 .right-sidebar {
     float: right;
 }
@@ -302,10 +358,9 @@ button > a {
     text-align: left;
 }
 
-.right-sidebar .fa {
-    font-size: 25px;
-    padding-left: 10px;
-    padding-right: 10px;
+.block .fa {
+    font-size: inherit;
+    padding: 0px 10px;
 }
 
 .right-sidebar i {
@@ -365,12 +420,13 @@ button > a {
     display: table;
     height: 40px;
     border-radius: 40px;
-    background-color: #999;
+    background-color: #CECECE;
     padding: 5px 20px;
     margin: auto;
     margin-top: 10px;
     margin-bottom: 10px;
     color: #fff;
+    box-shadow: 3px 3px 3px grey;
 }
 
 .round-button i {
@@ -383,14 +439,198 @@ button > a {
     text-decoration: none;
 }
 
-.round-button:hover {
-    background-color:rgba(0, 0, 0, 0.1);
-}
-
 .round-button.green {
     background-color: #0C8460;
 }
 
 .round-button.blue {
     background-color: #003062;
+}
+
+.round-button.green:hover {
+    transition: 0.25s all ease-in-out;
+    background-color: #0a6e50;
+}
+
+.round-button.blue:hover {
+    transition:0.25s all ease-in-out;
+    background-color: #032244;
+}
+
+table#about-page-feedback {
+    font-weight: 600;
+    margin-top: 10px;
+    width: 100%;
+    align-items: left;
+}
+
+table#about-page-feedback td {
+    padding: 10px 0px 10px 0px;
+    align-items: left;
+    vertical-align: top;
+}
+
+table#about-page-feedback td:nth-child(1) {
+    width: 15%;
+}
+
+table#about-page-feedback button.btn.btn-primary {
+    font-family: 'Roboto Bold', sans-serif;
+    background-color: #EF7C00;
+    border: none;
+}
+
+.container-fluid.nested-page {
+    padding-left: 0;
+    min-height: 100%;
+}
+
+
+.container-fluid.nested-page [class*="col-"] {
+}
+
+.sidebar {
+    width: 100%;
+    min-height: 100%;
+    padding: 0!important;
+    background-color: #EDEDED;
+    border-right: 1px solid #b4b4b4;
+}
+
+.sidebar-title {
+    font-weight: 300;
+    font-size: 35px;
+    width: 100%;
+    text-align: center;
+    padding: 30px 0px;
+    margin-right: -5px;
+}
+
+/*
+.sidebar > ul {
+    width: 100%;
+    padding-left: 0px;
+}
+
+.sidebar > ul > li {
+    list-style-type: none;
+    font-weight: 300;
+    padding: 15px 0px;
+    padding-left: 45px;
+    font-size: 22px;
+}
+
+.sidebar > ul > li:hover {
+    transition:0.25s all ease-in-out;
+    background-color: #CECECE;
+}
+*/
+
+table#sidebar-table {
+    table-layout: fixed;
+    width: 100%;
+}
+
+table#sidebar-table {
+    padding: 10px 0px;
+}
+
+table#sidebar-table td {
+    font-weight: 300;
+    font-size: 22px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+table#sidebar-table td:first-child {
+    padding-left: 30px;
+    width: 90%;
+}
+
+table#sidebar-table td:last-child {
+    text-align: right;
+    padding-right: 15px;
+}
+
+table#sidebar-table tr.sidebar-selected {
+    background-color: #CECECE;
+}
+
+table#sidebar-table tr.sidebar-indent > td{
+    padding-left: 50blocpx;
+}
+
+table#sidebar-table tr:hover {
+    transition:0.25s all ease-in-out;
+    background-color: #CECECE;
+}
+
+.flex-fill {
+    flex: 1 1 auto;
+}
+
+.content-nested-page .block {
+    padding: 40px;
+}
+
+table#modreg-notice {
+    font-family: 'Roboto Bold', sans-serif;
+    width: 100%;
+    font-weight: 1000;
+    margin-bottom: 20px;
+}
+
+table#modreg-notice td:last-child {
+    text-align: right;
+    color: red;
+}
+
+table#heading-with-manage {
+    width: 100%
+}
+
+table#heading-with-manage td:last-child {
+    vertical-align: top;
+    text-align: right;
+}
+
+table#heading-with-manage td i {
+    color: #888;
+}
+
+.custom-table {
+    margin-top: 10px;
+    text-align: center;
+    border-radius: 20px;
+}
+
+.custom-table thead > tr > th {
+    border-top: 0;
+}
+
+.students-selected {
+    font-weight: 800;
+}
+
+.students-selected.red {
+    color: #EF7878;
+}
+
+.students-selected.green {
+    color: #5EA645;
+}
+
+table#modreg-overview {
+    font-family: 'Roboto Bold', sans-serif;
+    font-size: 20px;
+    width: 90%;
+    margin: auto;
+}
+
+table#modreg-overview td {
+    padding: 15px 0px;
+}
+
+table#modreg-overview td:last-child {
+    text-align: right;
 }
