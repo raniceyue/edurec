@@ -3,9 +3,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap');
 
 
-/*
-* GENERAL
-*/
+/*******************************************
+*               GENERAL
+********************************************/
 html, body {
     font-family: 'Roboto Regular', sans-serif;
     font-weight: 600;
@@ -19,9 +19,44 @@ body {
     overflow-y: scroll;
 }
 
-/*
-* SCROLLBAR
-*/
+.content {
+    display: block;
+    min-width: 80%;
+    padding-bottom: 5%;
+    margin: auto;
+}
+
+.content-nested-page {
+    display: block;
+    width: 95%;
+    padding-right: 5%;
+    padding-bottom: 5%;
+    margin: auto;
+}
+
+.custom-table {
+    margin-top: 10px;
+    text-align: center;
+    border-radius: 20px;
+}
+
+.custom-table thead > tr > th {
+    border-top: 0;
+}
+
+a {
+    color: #000;
+}
+
+button > a {
+    text-decoration: none;
+    color: inherit;
+    line-height: 0;
+}
+
+/*******************************************
+*               SCROLLBAR
+********************************************/
 
 /* width */
 ::-webkit-scrollbar {
@@ -43,34 +78,9 @@ body {
   background: #555;
 }
 
-.content {
-    display: block;
-    min-width: 80%;
-    padding-bottom: 5%;
-    margin: auto;
-}
-
-.content-nested-page {
-    display: block;
-    width: 95%;
-    padding-right: 5%;
-    padding-bottom: 5%;
-    margin: auto;
-}
-
-a {
-    color: #000;
-}
-
-button > a {
-    text-decoration: none;
-    color: inherit;
-    line-height: 0;
-}
-
-/*
-* BREADCRUMBS
-*/
+/*******************************************
+*               BREADCRUMBS
+********************************************/
 
 .breadcrumbs {
     width: 100%;
@@ -100,11 +110,8 @@ button > a {
 
 .breadcrumbs li:before{
     content: ">";
- }
+}
 
-/*
-* ICONS
-*/
 
 .right-sidebar .fa.edit-icon {
     font-size: 20px;
@@ -126,9 +133,9 @@ button > a {
 }
 
 
-/*
-* NAVIGATION BAR
-*/
+/*******************************************
+*               NAV BAR
+********************************************/
 
 .navbar {
     background-color: #003062;
@@ -224,7 +231,9 @@ button > a {
     font-size: 25px;
 }
 
-/* Main Menu Dropdown */
+/*******************************************
+*            MAIN MENU DROPDOWN
+********************************************/
 
 .main-menu.dropdown-menu {
     position: absolute;
@@ -263,8 +272,9 @@ button > a {
     text-align: center;
 }
 
-
-/* Grey Blocks */
+/*******************************************
+*               BLOCKS
+********************************************/
 
 .block { 
     font-family: 'Roboto Light', sans-serif;
@@ -296,6 +306,18 @@ button > a {
     padding-left: 10px;
 }
 
+.block .fa {
+    font-size: inherit;
+    padding: 0px 10px;
+}
+
+.block i {
+    min-width: 50px;
+    text-align: center;
+}
+
+/* BLOCKS FOR LANDING PAGE */
+
 .landing-block h1 {
     font-family: 'Roboto Light', sans-serif;
     font-size: 30px;
@@ -315,9 +337,12 @@ button > a {
     color: #003062;
 }
 
+/* LONG COLUMN */
 .long-block {
     min-height: 100%;
 }
+
+/* SHORT COLUMNS */
 
 .short-block {
     min-height: 50%;
@@ -331,6 +356,7 @@ button > a {
     min-height: 50%;
 }
 
+/* Block for Notices */
 .block-notice {
     background-color: #FFD4D4;
 }
@@ -340,6 +366,8 @@ button > a {
     padding: 3%; 
     background-color: #A5D6C4;
 }
+
+/* SIDEBAR ON RIGHT OF LANDING & ABOUT PAGES */
 
 .right-sidebar {
     float: right;
@@ -358,16 +386,6 @@ button > a {
     text-align: left;
 }
 
-.block .fa {
-    font-size: inherit;
-    padding: 0px 10px;
-}
-
-.right-sidebar i {
-    min-width: 50px;
-    text-align: center;
-}
-
 .right-sidebar ul {
     padding: 0;
     padding-left: 50px;
@@ -379,10 +397,6 @@ button > a {
     padding: 0;
     padding-bottom: 3px;
 }
-
-/*
-* LANDING PAGE SPECIFIC STUFF
-*/ 
 
 .big-icon {
     background-color:#003062;
@@ -408,9 +422,9 @@ button > a {
     transform: translateY(40%);
 }
 
-/*
-* BREADCRUMBS
-*/
+/*******************************************
+*               BUTTONS
+********************************************/
 
 .round-button {
     font-family: 'Roboto Bold', sans-serif;
@@ -457,6 +471,11 @@ button > a {
     background-color: #032244;
 }
 
+
+/*******************************************
+*           ABOUT PAGE ELEMENTS
+********************************************/
+
 table#about-page-feedback {
     font-weight: 600;
     margin-top: 10px;
@@ -485,9 +504,18 @@ table#about-page-feedback button.btn.btn-primary {
     min-height: 100%;
 }
 
+/*******************************************
+*          NESTED PAGE ELEMENTS
+*    i.e. Global Education & ModReg
+********************************************/
 
-.container-fluid.nested-page [class*="col-"] {
+.content-nested-page .block {
+    padding: 40px;
 }
+
+/**************
+*   SIDEBAR
+***************/
 
 .sidebar {
     width: 100%;
@@ -505,26 +533,6 @@ table#about-page-feedback button.btn.btn-primary {
     padding: 30px 0px;
     margin-right: -5px;
 }
-
-/*
-.sidebar > ul {
-    width: 100%;
-    padding-left: 0px;
-}
-
-.sidebar > ul > li {
-    list-style-type: none;
-    font-weight: 300;
-    padding: 15px 0px;
-    padding-left: 45px;
-    font-size: 22px;
-}
-
-.sidebar > ul > li:hover {
-    transition:0.25s all ease-in-out;
-    background-color: #CECECE;
-}
-*/
 
 table#sidebar-table {
     table-layout: fixed;
@@ -556,7 +564,7 @@ table#sidebar-table tr.sidebar-selected {
     background-color: #CECECE;
 }
 
-table#sidebar-table tr.sidebar-indent > td{
+table#sidebar-table tr.sidebar-indent > td {
     padding-left: 50blocpx;
 }
 
@@ -565,13 +573,9 @@ table#sidebar-table tr:hover {
     background-color: #CECECE;
 }
 
-.flex-fill {
-    flex: 1 1 auto;
-}
-
-.content-nested-page .block {
-    padding: 40px;
-}
+/**************
+*   MODREG 
+***************/
 
 table#modreg-notice {
     font-family: 'Roboto Bold', sans-serif;
@@ -596,16 +600,6 @@ table#heading-with-manage td:last-child {
 
 table#heading-with-manage td i {
     color: #888;
-}
-
-.custom-table {
-    margin-top: 10px;
-    text-align: center;
-    border-radius: 20px;
-}
-
-.custom-table thead > tr > th {
-    border-top: 0;
 }
 
 .students-selected {
@@ -634,3 +628,8 @@ table#modreg-overview td {
 table#modreg-overview td:last-child {
     text-align: right;
 }
+
+/**********************
+*   GLOBAL EDUCATION 
+***********************/
+
