@@ -5,6 +5,7 @@ This is a redesign of NUS' administrative website, EduRec, for CS3240 Interactio
 ## Sitemap
 
 * [Home Page](/landing.html)
+* [About Page](/about.html)
 * [Global Education Page](/global_education.html)
 * [ModReg Page](/modreg.html) 
 

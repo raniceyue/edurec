@@ -31,11 +31,14 @@
             integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" 
             crossorigin="anonymous"></script>
 
-    <title> Edurec | ModReg </title>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+
+    <title> Edurec | Global Education </title>
 
 </head>
 
 <body>
+
 <header>
     <!-- NAVBAR -->
     <nav class="navbar sticky-top navbar-inverse custom-navbar">
@@ -203,8 +206,10 @@
 
 				<!-- NOTICES BLOCK-->
 				<div class="block block-notice">
-					<h2><i class="fa fa-exclamation"></i>Notices</h2>
-					<ul>
+					<div class="block-title">
+						<h2><i class="fa fa-exclamation"></i>Notices</h2>
+					</div>
+                    <ul class="simple-list" style="margin-bottom: 0; font-weight: 400;">
 						<li>
 							AY20/21 WINTER SCHOOL Applications now OPEN! Deadline 31 July 2020
 						</li>
@@ -215,112 +220,122 @@
 				</div>
 
 				<!-- SEARCH APPLICATIONS-->
-				<div class="block">
-					<div class="row">
-						<div class="col-md-3" style="margin: auto;">
-							<h3>Search Applications</h3>
-						</div>
+				<div class="row">
+					<div class="col">
+						<div class="block">
+							<div class="row">
+								<div class="col-md-3" style="margin: auto;">
+									<h3>Search Applications</h3>
+								</div>
 
-						<!-- SEARCH INPUT FIELDS -->
-						<div class="col-md-9">
-							<table id="global-ed-search">
-								<tr>
-									<td>
-										<select class="form-control" style="width: 90%; margin: auto;">
-											<option>Bug Report</option>
-											<option>Feedback on Design</option>
-											<option>Feature Suggestion</option>
-											<option>General Enquiry</option>
-										</select>
-									</td>
-									<td>
-										<input type="search" class="form-control" placeholder="">
-									</td>
-									<td>
-										<button onClick="myFunction()">
-											<h2><i class="fa fa-plus"></i></h2>
-										</button>
-										
-										<script>
-											function myFunction() {
-											  var btn = document.createElement("BUTTON");
-											  document.body.appendChild(btn);
-											}
-										</script>
-									</td>
-								</tr>
-							</table>
+								<!-- SEARCH INPUT FIELDS -->
+								<div class="col-md-9" id="ass">
+									<table id="global-ed-search">
+										<tr>
+											<td>
+												<select class="form-control" style="width: 90%; margin: auto;">
+													<option>Bug Report</option>
+													<option>Feedback on Design</option>
+													<option>Feature Suggestion</option>
+													<option>General Enquiry</option>
+												</select>
+											</td>
+											<td>
+												<input type="search" class="form-control" placeholder="">
+											</td>
+											<td>
+												<button id="btnAddFilter" title="Add filter">
+													<h2><i class="fa fa-plus"></i></h2>
+												</button>
+
+												<script type="text/javascript">
+													$("#btnAddFilter").click(function () {
+														$("#ass")
+														.append('<table id="global-ed-search"><tr><td><select class="form-control" style="width: 90%; margin: auto;"><option>Bug Report</option><option>Feedback on Design</option><option>Feature Suggestion</option><option>General Enquiry</option></select></td><td><input type="search" class="form-control" placeholder=""></td><td><button id="btnAddFilter"><h2><i class="fa fa-plus"></i></h2></button></td></tr></table>');
+														console.log("Added Filter");
+													});
+												</script>
+
+											</td>
+										</tr>
+									</table>
+								</div>
+							</div>
 						</div>
 					</div>
 				</div>
 
 				<!-- MY APPPLICATIONS SECTION -->
-				<div class="block">
-					<h2>My Applications</h2>
+				<div class="row">
+					<div class="col">
+						<div class="block">
+							<h2>My Applications</h2>
 
-					<!-- MODULE TABLE -->
-					<table class="table table-light table-hover custom-table" id="global-ed-applications">
-						<thead>
-						  <tr>
-							<th scope="col">External Study AY</th>
-							<th scope="col">ID</th>
-							<th scope="col">Type</th>
-							<th scope="col">Ext. Study Name</th>
-							<th scope="col">Status</th>
-							<th scope="col">Pending Actions</th>
-						  </tr>
-						</thead>
-						<tbody>
-						  <tr>
-							<td>2020/2021 Sem 1</td>
-							<td>12345</td>
-							<td>SEP</td>
-							<th>
-								<a href="">
-									School of Computing SEP Application 2020/2021 Sem 1
-								</a>
-							</th>
-							<td>
-								<div class="status-button reject">
-									Rejected
-								</div>
-							</td>
-							<td>0</td>
-						  </tr>
-						  <tr>
-							<td>2020/2021 Sem 2</td>
-							<td>54674</td>
-							<td>SEP</td>
-							<th>
-								<a href="">
-									School of Computing SEP Application 2020/2021 Sem 2
-								</a>
-							</th>							
-							<td>
-								<div class="status-button success">
-									Successful
-								</div>
-							</td>
-							<td>1</td>
-						  </tr>
-						  <tr>
-							<td>2019/2020</td>
-							<td>35635</td>
-							<td>Winter School</td>
-							<th>
-								<a href="">
-									i-SP: KOREA Korea University International Winter Campus 2019
-								</a>
-							</th>							
-							<td>
-								<div class="status-button incomplete">
-									Incomplete
-								</div>							
-							</td>
-							<td>7</td>
-						  </tr>
-						</tbody>
-					</table><!-- END TABLE -->
+							<!-- MODULE TABLE -->
+							<table class="table table-light table-hover custom-table" id="global-ed-applications">
+								<thead>
+								<tr>
+									<th scope="col">External Study AY</th>
+									<th scope="col">ID</th>
+									<th scope="col">Type</th>
+									<th scope="col">Ext. Study Name</th>
+									<th scope="col">Status</th>
+									<th scope="col">Pending Actions</th>
+								</tr>
+								</thead>
+								<tbody>
+								<tr>
+									<td>2020/2021 Sem 1</td>
+									<td>12345</td>
+									<td>SEP</td>
+									<th>
+										<a href="">
+											School of Computing SEP Application 2020/2021 Sem 1
+										</a>
+									</th>
+									<td>
+										<div class="status-button reject">
+											Rejected
+										</div>
+									</td>
+									<td>0</td>
+								</tr>
+								<tr>
+									<td>2020/2021 Sem 2</td>
+									<td>54674</td>
+									<td>SEP</td>
+									<th>
+										<a href="">
+											School of Computing SEP Application 2020/2021 Sem 2
+										</a>
+									</th>							
+									<td>
+										<div class="status-button success">
+											Successful
+										</div>
+									</td>
+									<td>1</td>
+								</tr>
+								<tr>
+									<td>2019/2020</td>
+									<td>35635</td>
+									<td>Winter School</td>
+									<th>
+										<a href="">
+											i-SP: KOREA Korea University International Winter Campus 2019
+										</a>
+									</th>							
+									<td>
+										<div class="status-button incomplete">
+											Incomplete
+										</div>							
+									</td>
+									<td>7</td>
+								</tr>
+								</tbody>
+							</table><!-- END TABLE -->
+						</div>
+					</div>
 				</div>
 
 				<!-- FAQ SECTION-->

@@ -6,6 +6,11 @@
 /*******************************************
 *               GENERAL
 ********************************************/
+
+* {
+    outline: 0;
+}
+
 html, body {
     font-family: 'Roboto Regular', sans-serif;
     font-weight: 600;
@@ -46,6 +51,18 @@ body {
 
 a {
     color: #000;
+}
+
+input, button {
+    border: none;
+    color: inherit;
+    background-color: inherit;
+    cursor: pointer;
+}
+
+button:focus {
+    outline: none;
+    border: none;
 }
 
 button > a {
@@ -281,10 +298,10 @@ button > a {
     font-size: inherit;
     line-height: 2rem;
     background-color: #F6F6F6;
-    border-radius: 10px;
+    border-radius: 20px;
     padding: 5%;
     width: 100%;
-    margin: 5px;
+    margin: 10px;
 }
 
 .block a {
@@ -307,11 +324,16 @@ button > a {
 }
 
 .block .fa {
-    font-size: inherit;
     padding: 0px 10px;
 }
 
-.block > .i {
+.block .block-title .fa {
+    font-size: inherit;
+    width: 50px;
+    text-align: center;
+}
+
+.block .block-title > .i {
     min-width: 50px;
     text-align: center;
 }
@@ -346,10 +368,12 @@ button > a {
 
 .short-block {
     min-height: 50%;
+    margin-bottom: 20px;
 }
 
 .long-col {
     height: 100%;
+    padding-bottom: 20px;
 }
 
 .long-col > .row {
@@ -386,12 +410,12 @@ button > a {
     text-align: left;
 }
 
-.right-sidebar ul {
+ul.simple-list {
     padding: 0;
     padding-left: 50px;
 }
 
-.right-sidebar ul > li {
+ul.simple-list > li {
     font-size: 16px;
     list-style-type: none;
     padding: 0;
