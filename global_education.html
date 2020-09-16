@@ -37,7 +37,7 @@
     <!-- SCRIPT TO LOAD HEADER.HTML -->
     <script type="text/javascript">
         $(document).ready(function(){
-            $("#header").load("./header.html");
+            $("#header").load("./partials/header.html");
             console.log("Load header.html");
         });
 	</script>
@@ -141,26 +141,40 @@
 		<div class="col">
 			<div class="content-nested-page">
 
-				<!-- BREADCRUMBS -->
-				<div class="breadcrumbs">
-					<ul>
-						<a href="landing.html">Home</a>
-						<li>
-							Academics
-						</li>
-						<li>
-							Global Education
-						</li>
-						<li>
-							External Study Application
-						</li>
-					</ul>
+				<div class="row">
+					<!-- BREADCRUMBS -->
+					<div class="col-md-6">
+						<div class="breadcrumbs">
+							<ul>
+								<a href="landing.html">Home</a>
+								<li>
+									Academics
+								</li>
+								<li>
+									Global Education
+								</li>
+								<li>
+									External Study Application
+								</li>
+							</ul>
+						</div>
+					</div>
+
+					<!-- ADD THIS PAGE TO QUICK LINKS -->
+					<div class="col-md-6">
+						<div class="add-to-quicklinks">
+							<a href="">
+								<i class="fa fa-star" style="color: #DBC500; font-size: 20px; margin-right: 5px;"></i>
+								Add this page to Quick Links
+							</a>
+						</div>
+					</div>
 				</div>
 
 				<!-- NOTICES BLOCK-->
 				<div class="block block-notice">
 					<div class="block-title">
-						<h2><i class="fa fa-exclamation"></i>Notices</h2>
+						<h2><i class="fa fa-exclamation" style="color: #DB5B5B;"></i>Notices</h2>
 					</div>
                     <ul class="simple-list" style="margin-bottom: 0; font-weight: 400;">
 						<li>
@@ -203,7 +217,7 @@
 
 												<script type="text/javascript">
 													$("#btnAddFilter").click(function () {
-														$.get("add_filter.html", function(data) {   
+														$.get("./partials/add_filter.html", function(data) {   
 															$("#search-input").append(data);
 														});
 														console.log("Added filter");

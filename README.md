@@ -17,7 +17,9 @@ high fidelity prototypes for our website designs on figma.
 [Link to Figma Prototype](https://www.figma.com/proto/FMun6ppVlsUrE6L2RoGAiM/CS3240-Assignment-2?node-id=2%3A2&scaling=scale-down)
 
 I decided to choose EduRec as it was an important administrative website for all NUS students. 
-Despite its importance, for some reason the website was poorly designed and buggy. 
+Despite its importance, for some reason the website was poorly designed and buggy.
+
+This design was implemented using jQuery and Boostrap. 
 
 ### Constraints
 

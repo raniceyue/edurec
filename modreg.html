@@ -37,7 +37,7 @@
     <!-- SCRIPT TO LOAD HEADER.HTML -->
     <script type="text/javascript">
         $(document).ready(function(){
-            $("#header").load("./header.html");
+            $("#header").load("./partials/header.html");
             console.log("Load header.html");
         });
 	</script>
@@ -134,18 +134,32 @@
 		<div class="col">
 			<div class="content-nested-page">
 
-				<!-- BREADCRUMBS -->
-				<div class="breadcrumbs">
-					<ul>
-						<a href="landing.html">Home</a>
-						<li>
-							Academics
-						</li>
-						<li>
-							ModReg
-						</li>
-					</ul>
-				</div>
+				<div class="row">
+					<!-- BREADCRUMBS -->
+					<div class="col-md-6">
+						<div class="breadcrumbs">
+							<ul>
+								<a href="landing.html">Home</a>
+								<li>
+									Academics
+								</li>
+								<li>
+									ModReg
+								</li>
+							</ul>
+						</div>
+					</div>
+
+					<!-- ADD THIS PAGE TO QUICK LINKS -->
+					<div class="col-md-6">
+						<div class="add-to-quicklinks">
+							<a href="">
+								<i class="fa fa-star" style="color: #DBC500; font-size: 20px; margin-right: 5px;"></i>
+								Add this page to Quick Links
+							</a>
+						</div>
+					</div>
+				</div>	
 
 				<div class="block block-modreg-notice">
 					<table id="modreg-notice">
