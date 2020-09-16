@@ -1,0 +1,29 @@
+<table id="global-ed-search">
+    <tr>
+        <td>
+            <select class="form-control" style="width: 90%; margin: auto;">
+                <option>Bug Report</option>
+                <option>Feedback on Design</option>
+                <option>Feature Suggestion</option>
+                <option>General Enquiry</option>
+            </select>
+        </td>
+        <td>
+            <input type="search" class="form-control" placeholder="">
+        </td>
+        <td>
+            <button id="btnRemoveFilter" title="Remove Filter">
+                <h2><i class="fa fa-minus"></i></h2>
+            </button>
+
+            <script type="text/javascript">
+                $(document).on("click",'#btnRemoveFilter',function(){
+                    $(this).closest('table').remove();
+                    console.log("Removed filter");
+                    return false;
+                });
+            </script>
+
+        </td>
+    </tr>
+</table>

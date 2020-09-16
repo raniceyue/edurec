@@ -61,8 +61,8 @@ input, button {
 }
 
 button:focus {
-    outline: none;
-    border: none;
+    outline: none!important;
+    border: 0;
 }
 
 button > a {
@@ -593,7 +593,7 @@ table#sidebar-table tr.sidebar-selected {
 }
 
 table#sidebar-table tr.sidebar-indent > td {
-    padding-left: 50blocpx;
+    padding-left: 50px;
 }
 
 table#sidebar-table tr:hover {
@@ -724,6 +724,11 @@ table#global-ed-search td:last-child {
     margin: auto;
     text-align: right;
     color: #4c4c4c;
+}
+
+table#global-ed-search td:last-child > button:hover {
+    transition: 0.25s all ease-in-out;
+    color: #626262;
 }
 
 table#global-ed-applications td:nth-child(5) {
