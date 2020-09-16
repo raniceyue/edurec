@@ -18,6 +18,7 @@ html, body {
     overflow: hidden;
     width: 100%;
     height: 100%;
+    padding-top: 35px;
 }
 
 body {
@@ -156,11 +157,15 @@ button > a {
 
 .navbar {
     background-color: #003062;
-    max-height: 3%;
+    max-height: 10%;
 }
 
+/**************************
+*   DROPDOWN MENU STUFF
+***************************/
+
 .navbar-nav .dropdown-menu {
-    position: absolute!important
+    position: absolute!important;
 }
 
 #dropdownMenuButton {
@@ -173,6 +178,42 @@ button > a {
     color: #fff;
     font-size: 35px;
     line-height: 1;
+}
+
+.dropdown-quicklinks,
+.dropdown-notifications {
+    left: auto!important;
+    top: 71px!important;
+    box-shadow: 5px 5px 5px #62626262;
+    border-radius: 0px 0px 10px 10px!important;
+    overflow-wrap: break-word;
+}
+
+.dropdown-quicklinks {
+    right: 205px;
+    padding: 0px!important;
+}
+
+.dropdown-quicklinks > a.dropdown-item {
+    border-left: 5px solid #c5c5c5;
+    border-bottom: 1px solid #F3F3F3;
+    padding: 10px 10px;
+    white-space: normal!important;
+}
+
+.dropdown-quicklinks > a.dropdown-item:last-child,
+.dropdown-notifications > a.dropdown-item:last-child {
+    border-bottom: none;
+    border-radius: 0px 0px 10px 10px;
+}
+
+.dropdown-notifications {
+    right: 94px;
+    max-width: 20rem;
+}
+
+.dropdown-notifications > a.dropdown-item {
+    white-space: normal!important;
 }
 
 .custom-navbar .navbar-right {
@@ -248,42 +289,64 @@ button > a {
     font-size: 25px;
 }
 
+button#dropdownMenuButton > .notification-badge {
+    position: absolute;
+    top: -5px;
+    right: 5px;
+    padding: 5px 8px;
+    border-radius: 50%;
+    background: #DC3737;
+    color: white;
+
+    font-weight: 700;
+    font-size: 14px;
+}
+
+button#dropdownMenuButton {
+    position: relative;
+    display: inline-block;
+}
+
 /*******************************************
 *            MAIN MENU DROPDOWN
 ********************************************/
 
 .main-menu.dropdown-menu {
     position: absolute;
-    background-color: #003062;
-    border-color: #aaa;
+    background-color: #01254d;
+    border-left: #aaa;
+    border-top: 1px #002349 solid;
     border-radius: 0;
-    min-width: 17rem;
-    height: 1000px;
+    min-width: 18rem;
+    height: 150vh;
     float: right;
-    margin: 10px 0px 0px;
+    margin-top: 10px;
+    margin-right: -1px;
 
     font-family: 'Roboto Light', sans-serif;
     text-align: left;
 
     right: 0;
+    top: 85%;
+    left: inherit!important;
 }
 
 .main-menu > .dropdown-item {
     color: #fff;
-    font-size: 30px;
+    font-size: 25px;
     min-height: 50px;
     margin: 10px 0px 10px 0px;
     padding: 10px 0px 10px 50px;
 }
 
 .main-menu > a.dropdown-item:hover {
-    background-color: #0056b3;
+    background-color: #003062;
     color: #fff;
 }
 
 .main-menu-title {
     font-family: 'Roboto Light', sans-serif;
-    font-size: 50px;
+    font-size: 40px;
     color: #fff;
     margin: 20px 0px 20px 0px;
     text-align: center;
