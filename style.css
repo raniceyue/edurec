@@ -160,6 +160,16 @@ button > a {
     max-height: 10%;
 }
 
+.custom-navbar .navbar-right {
+    display: block;
+    float: right;
+    padding-right: 15px;
+}
+
+.custom-navbar .nav.navbar-nav.navbar-right li {
+    float: right;
+}
+
 /**************************
 *   DROPDOWN MENU STUFF
 ***************************/
@@ -187,17 +197,13 @@ button > a {
     box-shadow: 5px 5px 5px #62626262;
     border-radius: 0px 0px 10px 10px!important;
     overflow-wrap: break-word;
-}
-
-.dropdown-quicklinks {
-    right: 205px;
     padding: 0px!important;
 }
 
-.dropdown-quicklinks > a.dropdown-item {
-    border-left: 5px solid #c5c5c5;
-    border-bottom: 1px solid #F3F3F3;
-    padding: 10px 10px;
+.dropdown-quicklinks > a.dropdown-item,
+.dropdown-notifications > a.dropdown-item {
+    border-left: 7px solid #c5c5c5;
+    border-bottom: 3px solid #F3F3F3;
     white-space: normal!important;
 }
 
@@ -207,26 +213,32 @@ button > a {
     border-radius: 0px 0px 10px 10px;
 }
 
+.dropdown-quicklinks {
+    right: 205px;
+}
+
+.dropdown-quicklinks > a.dropdown-item {
+    padding: 10px 10px;
+}
+
 .dropdown-notifications {
     right: 94px;
     max-width: 20rem;
 }
 
 .dropdown-notifications > a.dropdown-item {
-    white-space: normal!important;
+    padding: 10px 10px;
 }
 
-.custom-navbar .navbar-right {
-    display: block;
-    float: right;
-    padding-right: 15px;
+.dropdown-notifications > a.dropdown-item.unread {
+    border-left: 7px solid #EF7878;
 }
 
-.custom-navbar .nav.navbar-nav.navbar-right li {
-    float: right;
-}
 
-/* Icons */
+/**************************
+*    STYLING FOR ICONS
+***************************/
+
 .custom-navbar .nav.navbar-nav.navbar-right li > a { 
     padding: 0px 15px;
     color: #fff;
@@ -263,7 +275,10 @@ button > a {
     color: #EF7C00;
 }
 
-/* Searchbar */
+/**************************
+*       SEARCHBAR 
+***************************/
+
 .form-group {
     margin-bottom: 0rem!important;
 }
@@ -614,7 +629,8 @@ table#about-page-feedback button.btn.btn-primary {
 ***************/
 
 .sidebar {
-    width: 100%;
+    position: fixed;
+    width: 20%;
     min-height: 100%;
     padding: 0!important;
     background-color: #EDEDED;
